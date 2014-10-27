@@ -7,6 +7,7 @@ git clone https://github.com/henryhoang/Docker-Apache2
 
 docker build -t henryhoang/apache2 .
 docker run -d -p 80 henryhoang/apache2
+docker run -d -p 8082:80 henryhoang/apache
 OR docker run -d -P  henryhoang/apache2
 
 #Share files between host and container
