@@ -9,7 +9,7 @@ docker build -t henryhoang/apache2 .
 docker run -d -p 80 henryhoang/apache
 docker run -d -P  henryhoang/apache2
 
-#share files between host and container
+#Share files between host and container
 docker run --name apache-container -d -p 8089:80 -v /var/www/apache_container/:/var/www henryhoang/apache
 cd /var/www/apache_container
 
