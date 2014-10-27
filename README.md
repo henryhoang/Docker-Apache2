@@ -13,5 +13,6 @@ share files between host and container
 docker run --name apache-container -d -p 8089:80 -v /var/www/apache_container/:/var/www henryhoang/apache
 cd /var/www/apache_container
 
-vi index.html   #no need to docker run, just curl after index.html created/updated
+vi index.html   #no need to docker run, run curl after index.html created/updated:
 curl localhost:8089
+
