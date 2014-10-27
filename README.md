@@ -15,5 +15,4 @@ cd /var/www/apache_container
 
 vi index.html   #no need to docker run, run curl after index.html created/updated:
 curl localhost:8089
-sd
-bb
+
