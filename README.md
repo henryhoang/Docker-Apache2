@@ -13,8 +13,10 @@ OR docker run -d -P  henryhoang/apache2
 #Share files between host and container
 docker run --name apache-container -d -p 8089:80 -v /var/www/apache_container/:/var/www henryhoang/apache
 OR docker run --name apache-container -d -p :80 -v /var/www/apache_container/:/var/www henryhoang/apache
-cd /var/www/apache_container
+cd /var/www/apache_container (from host)
 
 vi index.html   #no need to docker run, run curl after index.html created/updated:
-curl localhost:8089
+docker ps
+9cadac6cc5ba        henryhoang/apache2:latest    "usr/sbin/apache2 -D   3 minutes ago       Up 3 minutes        0.0.0.0:49157->80/tcp     apache-container
+curl localhost:49157
 
